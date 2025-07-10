@@ -1,0 +1,35 @@
+let a = 5;
+let b = 8;
+let c = 13;
+let d = 21;
+let e = 34;
+let f = 55;
+let g = 89;
+let h = 144;
+let i = 233;
+let j = 377;
+
+addition = (a + b);
+soustraction = (c - d);
+multiplication = (e * f);
+division = (g / h);
+modulo = (i % j);
+
+let a1 = 7;
+a1--;
+++a1;
+a1 -=3;
+a1 +=800;
+a1--;
+a1 = a1*3;
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+console.log(e);
+console.log(f);
+console.log(g);
+console.log(h);
+console.log(i);
+console.log(j);
+console.log(a1);
