@@ -86,3 +86,97 @@ case "verts":
                 document.writeln("<h1>j'espere ta pas d'yeux sinon ca va m'ennerver </h1>");
             }
             console.log(prompteur);
+
+            // OPERATEURS LOGIQUES
+
+            // l'opérateur ET : &&
+            // -> prenom === prenomLogin
+            // -> age === ageLogin
+
+            let email = prompt("Quel est votre adresse mail");
+            let emailBDD = "groupe@gmail.com";
+
+            let mdp = prompt("Quel est votre mot de passe ?");
+            let mdpBDD = "X3F600KM";
+
+            // Pour afficher mon console.log il faut ABSOLUMENT que mes deux conditions soient vraies
+
+            /* BASE DES TRUE ET FALSE
+            * FALSE && FALSE : FALSE;
+            FALSE && TRUE : FALSE;
+            TRUE && FALSE : FALSE;
+            TRUE && TRUE : TRUE;
+            */
+            if ((email == emailBDD) && (mdp == mdpBDD)) {
+                console.log('vous êtes connecté');
+            }
+
+            // OU ( || )
+
+        // A la différence de && (ET), OU (||) ne demande que l'une des deux minimum conditions soit vraie
+
+        /* 
+        FALSE || FALSE : FALSE
+        FALSE || TRUE : TRUE
+        TRUE || FALSE : TRUE
+        TRUE || TRUE : TRUE
+        */
+
+        let prenom = "Nadia";
+        let prenom2 = "N'golo";
+
+        let age = 22;
+        let age2 =22;
+
+        if(prenom == prenom2 || age == age2) {
+            console.log('Tu est dansla verité !');
+        } else if (prenom == "Nadia" || age2 == 19) {
+            console.log('Tu es dans le mensonge !');
+        }
+
+        // ^ XOR (Opérateur OU Exclusif)
+        /* 
+        Bases TRUE ET FALSE :
+
+        TRUE ^ TRUE : FALSE
+        TRUE ^ FALSE : TRUE
+        FALSE ^ TRUE : TRUE
+        FALSE ^ FALSE : FALSE
+
+        Exemple : Une soirée en boite de nuit, l'entrée est gratuit SOIT aux blondes, SOIT aux chatains
+        */
+
+        let cheveux = "Brune";
+
+        if(cheveux == "blonde" ^ cheveux == "chatain") {
+            console.log("Vous pouvez entrer");
+        } else {
+            console.log("Vous devez payer pour entrer, 50€");
+        }
+
+        // L'opérateur PAS (!) "!" signifie que c'est le contraire de .
+
+        let utilisateurConnecte = true;
+
+        if (!utilisateurConnecte) {
+            console.log("Oui, il est connecté");
+        } else {
+            console.log("non, il n'est pas connecté");
+        }
+
+        // ça revient à écrire
+
+        if(utilisateurConnecte == false) {
+            console.log('Oui, il est connecté');
+        } else {
+            console.log('non, il est déconnecté');
+        }
+
+        let nombres = 23;
+
+        if(nombres == 23){ // RESULTAT = FALSE parce que le nombre EST egal à 23.
+            console.log('23');
+        } else {
+            console.log("F-A-L-S-E");
+        }
+
