@@ -58,6 +58,23 @@ function hellWorld(){
     console.log('cc');
 }
 
+// On laisse les paramètre et la fonction ne dispose d'aucun return
+function additionSansVSansR(){
+    document.writeln("<p>" + (10 + 2) + "</p>"); // '<p> ${10 + 2}</p>';
+} // J'appel ma fonction
+additionSansVSansR();
+
+//On rempli le ou les paramètrres et la fonction ne dispose d'aucun return
+
+function additionAvecVSansR(num1, num2) {
+    document.writeln(`<p> ${num1 + num2} </p>`);
+}
+
+// Je rempli mes paramètres à chaque fois que j'appelle ma fonction
+
+additionAvecVSansR(30, 50);
+additionAvecVSansR(60, 200);
+
 // 2 . Function avec paramètre sans valeur de retour
 function bonjourClasse(prenom){
     document.writeln("bonjour " + prenom);
@@ -88,5 +105,33 @@ function addition(num1, num2){
     return num1 + num2;
 }
 
+function bonjourR() {
+return (`<p> Bonjour tout le monde </p>`);
+}
+
+let bonjour1 = bonjourR();
+document.writeln(bonjour1);
+
+
+
 let addition1 = addition(4,10);
 console.log(addition1);
+
+addition(122, 122);
+
+
+// Function avec PROMPT :
+
+function meteo(saison, temperature) {
+    let message = `Nous sommes en ${saison} et il fait actuellement ${temperature}
+    degres`;
+
+    document.writeln(`<p> ${message} </p>`);
+}
+
+let saison = prompt("Donne moi une saison :");
+let temperature = prompt("Donne moi une temperature :");
+
+meteo(saison, temperature);
+
+console.log(saison, temperature);

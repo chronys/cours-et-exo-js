@@ -122,6 +122,78 @@ console.log(typeof BIRTH);
 const PASTRUE = false;
 console.log(typeof PASTRUE);
 
+// DOM un peu plus approfondi
+
+// Naviguer dans le DOM
+//Le DOM forme un arbre d'éléments liés entre eux :
+// Parent, enfants, frères, etc...
+
+//"parentElement" : "Recupère l'élément parent
+// "children" : liste des enfants directs
+// "nextElementSibling / previous ElementSibling" : frère suivant ou frère précedent
+
+let parag = document.querySelector("#second");
+
+console.log(parag.previousElementSibling); // Affichera le p sans id
+
+// innerHTML vs textContent
+// textContent affiche du texte BRUT alors que innerHTML transcrit le HTML en balises
+let inner = document.querySelector('#exempleInner');
+let text= document.querySelector('#exempleText');
+
+text.textContent = "<div> coucou </div>";
+inner.innerHTML = "<div><p><i>coucou</i></p></div>";
+
+// Cloner un élément 
+let clone = document.querySelector('#parent').cloneNode(true);
+
+document.body.appendChild(clone);
+
+// Petit rappel
+// Générer dynamiquement une structure complète
+
+// document.createElement() pour créer un élément
+// appendChild() pour les imbriquer
+// setAttribute() pour leur donner un attribut
+// textContent ou innerHTML pour insérer du contenu
+
+// Les classes
+// Manipuler les classes avec classList
+
+let cobbaye = document.createElement('span');
+
+// ajouter une classe
+
+cobbaye.classList.add('class1','class2');
+console.log(cobbaye);
+
+// Retirer une classe
+
+cobbaye.classList.remove('class1');
+console.log(cobbaye);
+
+// Toggle (ajoute ou supprime la classe si elle est présente ou non)
+cobbaye.classList.toggle('class1');
+
+// contains (vérifie si la classe existe dans l'attribut), renvoie True / False
+
+let check = cobbaye.classList.contains('class1');
+console.log(check);
+
+// value de formulaire
+
+let nom = document.querySelector('#nom').value;
+console.log(nom);
+let prenom3 = document.querySelector('#prenom').value;
+
+prenom3 = "Hakim";
+
+
+
+
+
+
+
 
 
 
