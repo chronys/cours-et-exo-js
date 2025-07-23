@@ -24,7 +24,11 @@ qarte.setAttribute("class","carte");
 
 console.log(qarte);
 
+let h2 = document.createElement('h2');
+let img = document.createElement('img');
 
+img.setAttribute('src','');
+img.setAttribute('alt','C\est vide');
 
 
 
